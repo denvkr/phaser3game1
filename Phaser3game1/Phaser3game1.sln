@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Phaser3game1", "Phaser3game1\Phaser3game1.njsproj", "{DFDF72C1-5A06-4003-B827-8312C736DF13}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DFDF72C1-5A06-4003-B827-8312C736DF13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFDF72C1-5A06-4003-B827-8312C736DF13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFDF72C1-5A06-4003-B827-8312C736DF13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFDF72C1-5A06-4003-B827-8312C736DF13}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6C8B369D-3BD2-4E96-98DF-1A4D997A8D22}
+	EndGlobalSection
+EndGlobal

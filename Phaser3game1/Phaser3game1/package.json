@@ -1,0 +1,9 @@
+{
+  "name": "phaser3game1",
+  "version": "0.0.0",
+  "description": "Phaser3game1",
+  "main": "server.js",
+  "author": {
+    "name": ""
+  }
+}
