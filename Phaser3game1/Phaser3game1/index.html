@@ -41,7 +41,7 @@
                 this.load.image('logo', 'sprites/phaser3-logo.png');
                 this.load.image('red', 'particles/red.png');
                 this.load.image('platform', 'sprites/isleinsky1.png');
-                this.load.image('bunny-stand', 'sprites/pks1.png')
+                this.load.image('bunny-stand', 'sprites/pks1.png');
             }
 
             function create ()
@@ -74,7 +74,15 @@
                 });
 
                 var logo = this.physics.add.image(100, 300, 'logo');
-
+                var vector = new Phaser.Math.Vector2();
+                var vector2 = new Phaser.Math.Vector2();
+                const x = 10;
+                const y = 10;
+                const x1 = 20;
+                const y1 = 20;
+                vector.set(x, y);
+                vector2.set(x1, y1);
+                console.log(vector.distance(vector2),vector.length(),vector2.length());
                 logo.setVelocity(50, 100);
                 logo.setBounce(1, 1);
                 logo.setCollideWorldBounds(true);
@@ -84,6 +92,7 @@
                 this.physics.add.collider(platforms, logo);
                 this.physics.add.collider(platforms, this.player);
                 this.physics.add.collider(logo, this.player);
+                //this.physics.add(logo,vector);
             }
             function update ()
             {
