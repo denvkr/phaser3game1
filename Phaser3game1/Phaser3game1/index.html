@@ -1,105 +1,17 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="phaser3game1.css">
-    <script src="dist/phaser.js"></script>
-    <script src="dist/phaser-arcade-physics.js"></script>
+    <script type="module" src="dist/phaser.js"></script>
+    <script type="module" src="dist/phaser-arcade-physics.js"></script>
+    <script type="module" src="consts.js"></script>
 </head>
 <body>
 <div class="container">
     <div class="item"></div>
     <div class="item">
-        <script>
-            var config = {
-                type: Phaser.AUTO,
-                width: 800,
-                height: 600,
-                physics: {
-                    default: 'arcade',
-                    arcade: {
-                        gravity: { y: 300 }
-                    },
-                    debug: true
-                },
-                scene: {
-                    preload: preload,
-                    create: create,
-                    update: update
-                }
-            };
-
-            var game = new Phaser.Game(config);
-
-            function preload ()
-            {
-                console.log('before setBaseURL');
-                this.load.setBaseURL('assets');
-
-                this.load.image('sky', 'skies/space3.png');
-                this.load.image('logo', 'sprites/phaser3-logo.png');
-                this.load.image('red', 'particles/red.png');
-                this.load.image('platform', 'sprites/isleinsky1.png');
-                this.load.image('bunny-stand', 'sprites/pks1.png');
-            }
-
-            function create ()
-            {
-                this.add.image(400, 300, 'sky').setScale(1.5);
-
-                // create the group
-                const platforms = this.physics.add.staticGroup();
-
-                // then create 5 platforms from the group
-                for (let i = 0; i <= 5; ++i)
-                {
-                     const x = Phaser.Math.Between(80, 700);
-                     const y = 150 * i;
-
-                     /** @type {Phaser.Physics.Arcade.Sprite} */
-                     const platform = platforms.create(x, y, 'platform');
-                     platform.scale = 0.7;
-
-                     /** @type {Phaser.Physics.Arcade.StaticBody} */
-                     const body = platform.body;
-                     body.updateFromGameObject();
-                }
-                var particles = this.add.particles('red');
-
-                var emitter = particles.createEmitter({
-                    speed: 150,
-                    scale: { start: 1, end: 0 },
-                    blendMode: 'ADD'
-                });
-
-                var logo = this.physics.add.image(100, 300, 'logo');
-                var vector = new Phaser.Math.Vector2();
-                var vector2 = new Phaser.Math.Vector2();
-                const x = 10;
-                const y = 10;
-                const x1 = 20;
-                const y1 = 20;
-                vector.set(x, y);
-                vector2.set(x1, y1);
-                console.log(vector.distance(vector2),vector.length(),vector2.length());
-                logo.setVelocity(50, 100);
-                logo.setBounce(1, 1);
-                logo.setCollideWorldBounds(true);
-                //this.scale.setGameSize(400, 300);
-                emitter.startFollow(logo);
-                this.player = this.physics.add.sprite(240, 320, 'bunny-stand').setScale(1.2);
-                this.physics.add.collider(platforms, logo);
-                this.physics.add.collider(platforms, this.player);
-                this.physics.add.collider(logo, this.player);
-                //this.physics.add(logo,vector);
-            }
-            function update ()
-            {
-
-            }
-        </script>
-
+        <script type="module" src="Script1.js"></script>
     </div>
     <div class="item"></div>
 </div>
